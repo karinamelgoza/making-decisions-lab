@@ -7,6 +7,13 @@
 */
 
 //CODE HERE
+var lovesCode = true
+
+if (lovesCode === true) {
+  console.log('I love to code!')
+} else {
+  console.log("Coding has it's challanges.")
+}
 
 // For problems 2-3 use the following lines of code:
 var amysAge = 29
@@ -21,6 +28,13 @@ var brittanisBirthYear = 1986
 */
 
 //CODE HERE
+if (amysAge < brittanisAge) {
+  console.log("Brittani is older.")
+} else if (amysAge === brittanisAge) {
+  console.log("They are the same age.")
+} else {
+  console.log('Amy is older.')
+}
 
 
 ////////// PROBLEM 3 //////////
@@ -30,11 +44,15 @@ var brittanisBirthYear = 1986
 */
 
 //CODE HERE
-
+if (amysBirthYear === brittanisBirthYear) {
+  console.log('Amy & Brittani were born in the same year')
+} else {
+  console.log('Amy & Brittani were not born in the same year')
+}
 
 
 // For problems 5-6 use the following lines of code:
-var arr = [10,20,30,40,50,60]
+var arr = [10, 20, 30, 40, 50, 60]
 
 ////////// PROBLEM 4 //////////
 /*
@@ -42,7 +60,8 @@ var arr = [10,20,30,40,50,60]
 */
 
 //Code Here
-
+var firstItem = arr[0]
+console.log(firstItem)
 
 ////////// PROBLEM 5 //////////
 /*
@@ -50,6 +69,9 @@ var arr = [10,20,30,40,50,60]
 */
 
 //Code Here
+var lastItemRemoved = arr.pop()
+console.log(arr)
+console.log(lastItemRemoved)
 
 
 
@@ -70,13 +92,15 @@ var family = ['Tyler', 'Jordan', 'Ryan', 'Alice', 'Ireland'];
 */
 
 //Code Here
-
+for (let i = 0; i < family.length; i++) {
+  console.log(family[i])
+}
 
 
 ////////// PROBLEM 8 //////////
 
 // Do not edit the code below.
-var nums = [1,2,3,6,22,98,45,23,22,12];
+var nums = [1, 2, 3, 6, 22, 98, 45, 23, 22, 12];
 let evensArr = []
 // Do not edit the code above.
 
@@ -85,7 +109,12 @@ let evensArr = []
 */
 
 //Code Here
-
+for (let i = 0; i < nums.length; i++) {
+  if (nums[i] % 2 === 0) {
+    evensArr.push(nums[i])
+  }
+}
+console.log(evensArr)
 
 
 ////////// PROBLEM 9 //////////
@@ -99,6 +128,17 @@ var score = 74
 */
 
 //Code Here
+if (score >= 90) {
+  console.log('A')
+} else if (score >= 80 && socre < 90) {
+  console.log('B')
+} else if (score >= 70 && score < 80) {
+  console.log('C')
+} else if (score >= 60 && score < 70) {
+  console.log('D')
+} else {
+  console.log('F')
+}
 
 
 ////////// Intermediate Problems //////////
@@ -107,23 +147,31 @@ var score = 74
 /*
   Create a variable called 'changeMyMind' and set it equal to true. 
   Check to see if changeMyMind is set to or false, if it is true, change the status to false, if it is false, change the status to true.
-
+ 
 */
 
 //CODE HERE
-
-
+let changeMyMind = true
+if (changeMyMind === true) {
+  console.log('false')
+} else {
+  console.log('true')
+}
 // Try to change the value of changeMyMind (irrespective of whether it is true or false) and then console.log it's new status. It should log true. Hint: use the not operator.
 
 //CODE HERE
-
+if (changeMyMind === !true) {
+  console.log('false')
+} else {
+  console.log('true')
+}
 
 
 
 ////////// PROBLEM 11 //////////
 
 // Do not edit the code below.
-var myFavoriteNumbers = [4,8,12,16,20,24];
+var myFavoriteNumbers = [4, 8, 12, 16, 20, 24];
 // Do not edit the code above.
 
 /*
@@ -131,18 +179,17 @@ var myFavoriteNumbers = [4,8,12,16,20,24];
 */
 
 //Code Here
-
-
+let problem9 = myFavoriteNumbers[4]
+console.log(problem9)
 
 // Subscripting an array can fail. What happens if you subscript to the 7th element, but there are not 7 elements in the array? Now, use an if statement to help make sure you have the correct amount of elements, and then reset your variable, 'problem9' to the value of the 7th element in the array.
 
 //Code Here
 
-
 ////////// PROBLEM 12 //////////
 
 // Do not edit the code below.
-var listOfNumbers = [1,2,3,4,5,6,7,8,9,10,11,12];
+var listOfNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 // Do not edit the code above.
 
 // Use a for-loop to iterate through 'listOfNumbers', then check to see if the number is divisible by 3. If it is, console.log '{number} is divisible by 3.'
