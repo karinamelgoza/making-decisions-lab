@@ -36,6 +36,13 @@ if (amysAge < brittanisAge) {
   console.log('Amy is older.')
 }
 
+// if (amysAge > brittanisAge) {
+//   console.log('Amy is older.')
+// } else if (amysAge === brittanisAge) {
+//   console.log("They are the same age.")
+// } else {
+//   console.log('Brittani is older.')
+// }
 
 ////////// PROBLEM 3 //////////
 
@@ -69,10 +76,14 @@ console.log(firstItem)
 */
 
 //Code Here
+
+// This will remove last item from array and store in a variable of its own 
 var lastItemRemoved = arr.pop()
 console.log(arr)
 console.log(lastItemRemoved)
 
+// arr.pop()  *This will just remove last item from array 
+// console.log(arr)
 
 
 ////////// PROBLEM 6 //////////
@@ -179,13 +190,21 @@ var myFavoriteNumbers = [4, 8, 12, 16, 20, 24];
 */
 
 //Code Here
-let problem9 = myFavoriteNumbers[4]
-console.log(problem9)
+// let problem9 = myFavoriteNumbers[4]
+// console.log(problem9)
 
 // Subscripting an array can fail. What happens if you subscript to the 7th element, but there are not 7 elements in the array? Now, use an if statement to help make sure you have the correct amount of elements, and then reset your variable, 'problem9' to the value of the 7th element in the array.
 
 //Code Here
+// let problem9 = myFavoriteNumbers[6]
+// console.log(problem9) *logs as undefined 
 
+if (myFavoriteNumbers.push(28)) {
+  console.log(myFavoriteNumbers)
+}
+
+let problem9 = myFavoriteNumbers[6]
+console.log(problem9)
 ////////// PROBLEM 12 //////////
 
 // Do not edit the code below.
@@ -195,6 +214,11 @@ var listOfNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 // Use a for-loop to iterate through 'listOfNumbers', then check to see if the number is divisible by 3. If it is, console.log '{number} is divisible by 3.'
 
 //Code Here
+for (let i = 0; i < listOfNumbers.length; i++) {
+  if (listOfNumbers[i] % 3 === 0) {
+    console.log(listOfNumbers[i] + ' is divisble by 3')
+  }
+}
 
 
 ////////// PROBLEM 13 //////////
@@ -207,7 +231,9 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 */
 
 //Code Here
-
+for (let i = arr.length - 1; i >= 0; i--) {
+  console.log(letters[i])
+}
 
 ////////// Advanced Problems //////////
 
@@ -229,7 +255,25 @@ If the letter grade is not one of the above letters, console.log 'Not an eligibl
 */
 
 //Code Here
-
+switch (letterGrade) {
+  case 'A':
+    console.log('The student is doing excellently')
+    break;
+  case 'B':
+    console.log("The student is doing well.")
+    break;
+  case 'C':
+    console.log("The student is doing alright.")
+    break;
+  case 'D':
+    console.log("The student is not doing very well.")
+    break;
+  case 'F':
+    console.log("The student is failing.")
+    break;
+  default:
+    console.log('Not an eligible grade.')
+}
 
 
 ////////// PROBLEM 15 //////////
@@ -258,3 +302,15 @@ If the letter grade is not one of the above letters, console.log 'Not an eligibl
 */
 
 //Code Here
+
+for (let i = 1; i <= 100; i++) {
+  if (i % 5 === 0 && i % 3 === 0) {
+    console.log('Devmountain')
+  } else if (i % 3 === 0) {
+    console.log('Dev')
+  } else if (i % 5 === 0) {
+    console.log('Mountain')
+  } else {
+    console.log(i)
+  }
+}
